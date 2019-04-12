@@ -15,14 +15,14 @@ var myHeading = document.querySelector('h1');
 function setUserName() {
   var myName = prompt('Please Enter Your Name.');
   localStorage.setItem('name', myName);
-  myHeading.textContent = 'Player Trade House, ' + myName;
+  myHeading.textContent = 'Hello, ' + myName + '! ';
 }
 
 if(!localStorage.getItem('name')) {
   setUserName();
 } else {
   var storedName = localStorage.getItem('name');
-  myHeading.textContent = 'Player Trade House, ' + storedName;
+  myHeading.textContent = 'Hello, ' + storedName;
 }
 
 myButton.onclick = function() {
